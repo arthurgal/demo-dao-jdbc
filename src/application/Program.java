@@ -29,7 +29,14 @@ public class Program {
 			System.out.println(obj);
 		}
 
-		
+		System.out.println("#################### test 03");
+
+
+		List<Seller> list02 = sellerDao.findAll();
+
+		for (Seller obj02 : list02){
+			System.out.println(obj02);
+		}
 	}
 
 }
