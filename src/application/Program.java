@@ -46,6 +46,10 @@ public class Program {
 		seller = sellerDao.findById(1);
 		seller.setName("MAria joaquina");
 		sellerDao.update(seller);
+
+		System.out.println("#################### test 06");
+
+		sellerDao.deleteById(50);
 	}
 
 }
