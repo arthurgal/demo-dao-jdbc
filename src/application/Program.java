@@ -40,6 +40,12 @@ public class Program {
 
 		sellerDao.insert(newSeller);
 		System.out.println("Inserido: Novo id: " + newSeller.getId());
+
+		System.out.println("#################### test 05");
+
+		seller = sellerDao.findById(1);
+		seller.setName("MAria joaquina");
+		sellerDao.update(seller);
 	}
 
 }
