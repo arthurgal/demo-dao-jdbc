@@ -21,7 +21,6 @@ public class Program {
 		System.out.println(seller);
 
 		System.out.println("#################### test 02");
-
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findDepartment(department);
 
@@ -30,13 +29,17 @@ public class Program {
 		}
 
 		System.out.println("#################### test 03");
-
-
 		List<Seller> list02 = sellerDao.findAll();
 
 		for (Seller obj02 : list02){
 			System.out.println(obj02);
 		}
+
+		System.out.println("#################### test 04");
+		Seller newSeller = new Seller(null, "Chico", "chico@hotmail.com", new Date(), 5000.00, department);
+
+		sellerDao.insert(newSeller);
+		System.out.println("Inserido: Novo id: " + newSeller.getId());
 	}
 
 }
